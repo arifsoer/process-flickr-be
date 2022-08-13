@@ -8,23 +8,24 @@ const ax = axios.create({
 });
 
 /**
- * 
- * @param {*} optionalParamsObject 
+ *
+ * @param {*} optionalParamsObject
  * @returns api flickr response
  */
 const getPublicImage = async (optionalParamsObject) => {
-  const formatedParam = []
+  const formatedParam = [];
   for (const key in optionalParamsObject) {
     if (Object.hasOwnProperty.call(optionalParamsObject, key)) {
       const el = optionalParamsObject[key];
-      formatedParam.push(`${key}=${el}`)
+      formatedParam.push(`${key}=${el}`);
     }
   }
 
   try {
-    const response = await ax.get(
-      "/photos_public.gne?format=json&nojsoncallback=1&" + formatedParam.join("&")
-    );
+    const getUrl =
+      "/photos_public.gne?format=json&nojsoncallback=1&" +
+      formatedParam.join("&");
+    const response = await ax.get(getUrl);
     return response.data;
   } catch (error) {
     throw error;
