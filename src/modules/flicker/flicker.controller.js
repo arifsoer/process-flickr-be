@@ -3,7 +3,7 @@ import { getPublicImage } from "./flicker.source.js";
 // Get data controller
 const getData = async (req, res, next) => {
   try {
-    const queryParams = req.queryParams
+    const queryParams = req.query
 
     // get the data from source
     const dataSource = await getPublicImage(queryParams);

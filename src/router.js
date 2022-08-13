@@ -4,6 +4,6 @@ import flicker from "./modules/flicker/flicker.router.js"
 
 const router = Router()
 
-router.use("/flicker", flicker)
+router.use("/flickr", flicker)
 
 export default router;
