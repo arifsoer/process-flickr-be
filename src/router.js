@@ -1,6 +1,6 @@
 import { Router } from "express"
 
-import flicker from "./modules/flicker/flicker.router.js"
+import flicker from "./modules/flickr/flickr.router.js"
 
 const router = Router()
 
