@@ -31,3 +31,6 @@ app.use(failSafeHandler);
 app.listen(PORT, () => {
   console.log("server ready get request");
 });
+
+// export for suppoer testing
+export default app;
